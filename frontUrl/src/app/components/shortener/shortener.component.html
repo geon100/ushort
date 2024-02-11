@@ -1,0 +1,44 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-body">
+          <form [formGroup]="shortenerForm" (ngSubmit)="shortenUrl()">
+            <div class="mb-3">
+              <mat-label>Enter URL</mat-label>
+              <div class="input-group">
+                <input type="text"  class="form-control" id="originalUrl" formControlName="originalUrl" >
+                <button type="submit" mat-raised-button color="primary" class="btn btnp">Shorten</button>
+              </div>
+              <div *ngIf="shortenerForm.get('originalUrl')?.hasError('required') && shortenerForm.get('originalUrl')?.touched"
+                   class="text-danger mt-2">URL is required.</div>
+              <div *ngIf="shortenerForm.get('originalUrl')?.hasError('pattern') && shortenerForm.get('originalUrl')?.touched"
+                   class="text-danger mt-2">Invalid URL format.</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-4" *ngIf="shortUrl">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-body">
+          <div class="bg-light p-3 rounded shadow mb-2">
+            <h3 class="mb-1 text-dark">Shortened URL:
+              <a [href]="shortUrl" target="_blank" class="text-primary">{{ shortUrl }}</a>
+              <button mat-mini-fab class="custom-mini-fab" matTooltip="Copy to Clipboard" (click)="copyToClipboard()">
+                <fa-icon [icon]="fa.copy"></fa-icon> 
+              </button>
+            </h3>
+          </div>
+                 
+          <p class="mb-2">QR Code:</p>
+          <qrcode (qrCodeURL)="onChangeURL($event)" [qrdata]="shortUrl" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+          <a [href]="qrCodeDownloadLink" mat-fab color="warn" class="mt-3" download="qrcode" matTooltip="Download QR"><fa-icon [icon]="fa.download"></fa-icon></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

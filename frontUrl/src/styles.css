@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-image: url(https://getwallpapers.com/wallpaper/full/0/7/e/538714.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure the background covers the entire viewport */
+  background-position: center; /* Center the background image */
+  color: #fff; /* Set your desired text color */
+  font-family: 'Arial', sans-serif; /* Choose a suitable font-family */
+  margin: 0; /* Remove default margin to ensure full-page coverage */
+  padding: 0; /* Remove default padding */
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,26 @@
+/* styles.css or your component-specific style file */
+
+/* Body Styles */
+body {
+  /* Set your desired body background color */
+  color: #fff; /* Set your desired text color */
+}
+
+/* Container Styles */
+.heading {
+ /* Set your desired container background color */
+  padding: 20px;
+  border-radius: 10px; /* Optional: Add rounded corners to the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+}
+
+/* Heading Styles */
+h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0; /* Optional: Remove default margin */
+}
+
+

@@ -1,0 +1,54 @@
+/* Add this style to your global styles or the component's style file */
+
+.custom-mini-fab {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border-radius: 50%; /* Make it circular */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.custom-mini-fab:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+
+.card {
+  background-color: #43436469;
+  color: #fff;
+  border-radius: 10px; /* Optional: Add rounded corners to the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+  border: none; /* Remove card borders for a cleaner look */
+}
+
+.card-body {
+  padding: 20px; /* Add padding to the card body */
+}
+
+.form-label {
+  font-weight: bold; /* Make the label text bold */
+}
+
+.input-group {
+  margin-bottom: 20px; /* Add margin at the bottom of the input group */
+}
+
+.btnp{
+  transition: background-color 0.3s; /* Add a smooth transition to the primary button */
+}
+
+.btnp:hover {
+  background-color: #3498db; /* Change the background color on hover */
+}
+
+.btn-danger {
+  margin-top: 15px; /* Add margin at the top of the danger button */
+}
+.mat-tooltip {
+  background-color: #2196F3;
+  color: #fff;
+}
+
+.text-danger {
+  color: #e74c3c;
+}
