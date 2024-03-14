@@ -30,7 +30,7 @@ export class ShortenerComponent implements OnInit{
     if(this.shortenerForm.valid){
       this.service.short(this.shortenerForm.get('originalUrl')?.value).subscribe((res:{original:string,shortId:string})=>{
         if(res){
-          this.shortUrl=`${environment.OwnUrl}/${res.shortId}`
+          this.shortUrl=`${window.location.href}${res.shortId}`
         }
       })
     }

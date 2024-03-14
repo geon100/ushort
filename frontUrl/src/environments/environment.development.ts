@@ -1,4 +1,4 @@
 export const environment = {
-  ApiUrl:'http://localhost:3001',
+  ApiUrl:'https://ushort-6n6v.onrender.com',
   OwnUrl:'http://localhost:4200'
 };
